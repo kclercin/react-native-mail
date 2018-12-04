@@ -88,9 +88,9 @@ public class RNMailModule extends ReactContextBaseJavaModule {
       ReadableMap attachment = options.getMap("attachment");
       if (attachment.hasKey("path") && !attachment.isNull("path")) {
         String path = attachment.getString("path");
-        File file = new File(path);
-        Uri p = Uri.fromFile(file);
-        i.putExtra(Intent.EXTRA_STREAM, p);
+        Uri fileUri = Uri.parse(path);
+        i.putExtra(Intent.EXTRA_STREAM, fileUri);
+        i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
       }
     }
 
@@ -112,7 +112,6 @@ public class RNMailModule extends ReactContextBaseJavaModule {
     } else {
       Intent chooser = Intent.createChooser(i, "Send Mail");
       chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
       try {
         reactContext.startActivity(chooser);
       } catch (Exception ex) {
