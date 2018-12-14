@@ -39,7 +39,6 @@
 		46FEDE7F1AFF192F00D3261C /* libRNMail.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMail.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FEDE821AFF192F00D3261C /* RNMail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNMail.h; sourceTree = "<group>"; };
 		46FEDE841AFF192F00D3261C /* RNMail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNMail.m; sourceTree = "<group>"; };
-		46FEDE8A1AFF192F00D3261C /* RNMailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNMailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FEDE901AFF192F00D3261C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				46FEDE811AFF192F00D3261C /* RNMail */,
-				46FEDE8E1AFF192F00D3261C /* RNMailTests */,
 				46FEDE801AFF192F00D3261C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				46FEDE7F1AFF192F00D3261C /* libRNMail.a */,
-				46FEDE8A1AFF192F00D3261C /* RNMailTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,14 +84,6 @@
 				46FEDE841AFF192F00D3261C /* RNMail.m */,
 			);
 			path = RNMail;
-			sourceTree = "<group>";
-		};
-		46FEDE8E1AFF192F00D3261C /* RNMailTests */ = {
-			isa = PBXGroup;
-			children = (
-				46FEDE8F1AFF192F00D3261C /* Supporting Files */,
-			);
-			path = RNMailTests;
 			sourceTree = "<group>";
 		};
 		46FEDE8F1AFF192F00D3261C /* Supporting Files */ = {
@@ -125,24 +114,6 @@
 			productReference = 46FEDE7F1AFF192F00D3261C /* libRNMail.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		46FEDE891AFF192F00D3261C /* RNMailTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46FEDE961AFF192F00D3261C /* Build configuration list for PBXNativeTarget "RNMailTests" */;
-			buildPhases = (
-				46FEDE861AFF192F00D3261C /* Sources */,
-				46FEDE871AFF192F00D3261C /* Frameworks */,
-				46FEDE881AFF192F00D3261C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				46FEDE8D1AFF192F00D3261C /* PBXTargetDependency */,
-			);
-			name = RNMailTests;
-			productName = RNMailTests;
-			productReference = 46FEDE8A1AFF192F00D3261C /* RNMailTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,8 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				46FEDE7E1AFF192F00D3261C /* RNMail */,
-				46FEDE891AFF192F00D3261C /* RNMailTests */,
+				46FEDE7E1AFF192F00D3261C /* RNMail */
 			);
 		};
 /* End PBXProject section */
@@ -312,40 +282,6 @@
 			};
 			name = Release;
 		};
-		46FEDE971AFF192F00D3261C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RNMailTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cj.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		46FEDE981AFF192F00D3261C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RNMailTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cj.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -363,15 +299,6 @@
 			buildConfigurations = (
 				46FEDE941AFF192F00D3261C /* Debug */,
 				46FEDE951AFF192F00D3261C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		46FEDE961AFF192F00D3261C /* Build configuration list for PBXNativeTarget "RNMailTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46FEDE971AFF192F00D3261C /* Debug */,
-				46FEDE981AFF192F00D3261C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
